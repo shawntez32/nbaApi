@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import sys, os
 from pymongo import MongoClient
-sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/sports/nba/")
+sys.path.append(os.path.dirname((__file__)) + "/nba/")
 from nbaGameLines import *
 from nbaGetData import *
 
