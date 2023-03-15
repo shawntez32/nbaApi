@@ -169,12 +169,3 @@ def nba_get_stats(nba_team,year):
         e = {"Team":nba_team,"Stats":Stats,"index":index1}
         nba_2023_stats.append(e)
     index1 += 1
-
-years = [2022]
-e = 0
-
-for team in nba_dicts:
-   for year in years:
-    if e < 8:
-        data = nba_get_stats(team['abv'],year)
-e += 1
