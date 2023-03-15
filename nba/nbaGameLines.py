@@ -1,7 +1,6 @@
 import requests
 import bs4
 from bs4 import BeautifulSoup
-import pandas as pd
 
 url = 'https://www.espn.com/nba/lines'
 
