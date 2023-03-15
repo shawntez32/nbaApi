@@ -1,9 +1,6 @@
 from nba import *
 from pymongo import MongoClient
 from requests_html import HTMLSession,AsyncHTMLSession
-import nest_asyncio
-
-nest_asyncio.apply()
 
 client = MongoClient("mongodb+srv://shawntez32:Tezzyk32@cluster0.wpzbm.mongodb.net/?retryWrites=true&w=majority")
 
