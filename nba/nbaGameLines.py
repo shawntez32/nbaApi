@@ -60,6 +60,11 @@ for e in range(len(home_ats)):
                     'home_ml':hMl,'away_ml':aMl, 'home_spread':hSpr,'away_spread':float(hSpr) * -1,
                     'over':oV,'under':float(oV) * -1}
             nba_game_lines.append(nba_game_line)
+        elif hMl[0] == '+':
+            nba_game_line = {'home':hTM,'away':aTM,'home_ats':hAts,'away_ats':aAts,
+                    'home_ml':hMl,'away_ml':aMl, 'home_spread':float(oV) * -1,'away_spread':oV,
+                    'over':hSpr,'under':float(hSpr) * -1}
+            nba_game_lines.append(nba_game_line)     
         else:
             nba_game_line = {'home':hTM,'away':aTM,'home_ats':hAts,'away_ats':aAts,
                     'home_ml':hMl,'away_ml':aMl, 'home_spread':oV,'away_spread':float(oV) * -1,
@@ -85,6 +90,3 @@ class GameLine:
 
     def gamelines(self):
         pass
-
-print(teams)
-print(nba_game_lines)
