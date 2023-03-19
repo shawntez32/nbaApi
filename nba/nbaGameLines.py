@@ -38,12 +38,16 @@ home_spread = lines[5::8]
 over = lines[1::8]
 home_odds = lines[7::8]
 
+away = teams[0::2]
+home = teams[1::2]
+
 for e in range(len(home_ats)):
     try:
-        hTM = teams[e + 1]
+        hTM = home[e]
+        aTM = away[e]
     except:
-        hTM = 'idk'
-    aTM = teams[e]
+        hTM = ''
+        atm = ''
     hAts = home_ats[e]
     aAts = away_ats[e]
     hMl = home_ml[e]
@@ -63,7 +67,6 @@ for e in range(len(home_ats)):
             nba_game_lines.append(nba_game_line)
     except:
         pass
-    a += 1
 
 class GameLine:
     def __init__(self,home,away,home_ats,away_ats,home_ml,away_ml,home_spread,away_spread,over,under,home_odds,away_odds):
@@ -83,3 +86,5 @@ class GameLine:
     def gamelines(self):
         pass
 
+print(teams)
+print(nba_game_lines)
